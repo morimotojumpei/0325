@@ -1,0 +1,164 @@
+/* ----------ここからメイン---------- */
+main {
+  font-family: serif;
+}
+.group {
+  position: relative;
+}
+
+.event > h1 {
+  margin-top: 100px;
+}
+
+div[class ^="event"] {
+  font-size: 36px;
+  margin: 20px 0;
+  text-align: center;
+  /* font-weight: bold; */
+  line-height: 2.2;
+  text-shadow: 2px 3px 3px silver;
+}
+
+.event_info {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.event_info p {
+  padding-bottom: 30px;
+  line-height: normal;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+.event_info #calendar {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.group .bg_img {
+  position: absolute;
+  background-image: url("../../image/schedule/schedule.png");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 90%;
+  box-shadow:0px 0px 10px 10px rgb(255, 255, 255) inset;
+  opacity: 0.2;
+}
+
+/* -----ここからイベント開催予定日----- */
+
+.list {
+  border: 1px solid gray ;
+  margin: 0  20px 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+/* addでshowクラス追加 */
+.show  {
+  opacity: 1;
+  transform: none;
+}
+
+.list_title {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.list_title a {
+  text-decoration: none;
+  color: black;
+}
+.list_title a:hover {
+  text-decoration: underline;
+}
+
+.list .parts {
+  display: flex;
+}
+
+.photo .event_picture {
+  display: block;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+}
+
+.details ul li {
+ line-height: 2.2;
+ border-bottom: 1px dashed #e5e5e5;
+ padding-left: 100px;
+ margin: 5px;
+ position: relative;
+}
+.details span {
+display: inline-block;
+background-color: rgba(255, 166, 0, 0.3);
+color: black;
+width: 80px;
+height: 32px;
+text-align: center;
+border-radius: 4px;
+position: absolute;
+top: 0;
+left: 0;
+}
+.details ul li a {
+  text-decoration: none;
+  color: rgba(255, 0, 0, 0.363);
+}
+
+.point {
+ padding: 5px;
+ line-height: 1.2;
+}
+
+.entry_btn .btnGold {
+  margin: 5px auto;
+  border: 2px solid #333;
+  background-color:rgba(255, 166, 0);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.entry_btn .btnGold:hover {
+color: black;
+background-color: rgba(255, 166, 0, 0.3);
+box-shadow: 0 5px 10px black;
+transform: translate(0, -5px);
+}
+
+.btnGold {
+  display: block;
+  font-size: 20px;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  line-height: normal;
+}
+
+@media screen and (max-width:1000px) {
+  .list .parts {
+    display: block;
+  }
+  .photo .event_picture {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .event h1:first-child {
+    margin-top: 20px;
+  }
+}
